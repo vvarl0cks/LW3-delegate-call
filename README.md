@@ -1,4 +1,6 @@
-## Learn about delegatecall attacks - where one contract can change data in another | Learn Web3 DAO
+# 🐙 Learn about delegatecall attacks | Learn Web3 DAO
+
+<img src="https://i.imgur.com/78ty5XV.png"/>
 
 .delegatecall() is a method in Solidity used to call a function in a target contract from an original contract. However, unlike other methods, when the function is executed in the target contract using
 
@@ -34,3 +36,5 @@ Attack Contract's Address 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
 
   10 passing (1s)
 ```
+# 👮 Prevention
+Use stateless library contracts which means that the contracts to which you delegate the call should only be used for execution of logic and should not maintain state. This way, it is not possible for functions in the library to modify the state of the calling contract.
